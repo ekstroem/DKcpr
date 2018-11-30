@@ -5,12 +5,15 @@
 #' @export
 check_mod11 <- function(cpr) {
 
-    cpr <- date_of_birth(cpr)
+    cpr <- clean_cprstring(cpr)
+    anyna <- is.na(date_of_birth(cpr))
 
     cprmatrix <- stringr::str_split_fixed(cpr, "", 10)
     class(cprmatrix) <- "integer"
 
-    return( as.vector((cprmatrix %*% c(4, 3, 2, 7, 6, 5, 4, 3, 2, 1) %% 11) == 0))
+    res <- as.vector((cprmatrix %*% c(4, 3, 2, 7, 6, 5, 4, 3, 2, 1) %% 11) == 0)
+    res[anyna] <- NA
+    return(res)
 }
 
 
