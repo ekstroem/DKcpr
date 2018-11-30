@@ -3,4 +3,5 @@
 export(check_mod11)
 export(clean_cprstring)
 export(date_of_birth)
+export(gender)
 export(is_cpr)
