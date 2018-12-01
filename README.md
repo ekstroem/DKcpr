@@ -1,10 +1,3 @@
----
-title: "DKcpr"
-output:
-  html_document:
-     keep_md: TRUE
----
-
 # DKcpr
 
 ## Working with Danish CPR numbers in R
