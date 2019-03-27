@@ -7,10 +7,10 @@
 clean_cprstring(cpr)
 }
 \arguments{
-\item{cpr}{A vector of cpr number strings}
+\item{cpr}{A vector of potential CPR number strings}
 }
 \value{
-A vector of cleaned cpr number strings
+A vector of cleaned CPR number strings
 }
 \description{
 Check the modulo 11 rules for CPR numbers

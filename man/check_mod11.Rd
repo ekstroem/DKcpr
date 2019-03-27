@@ -7,10 +7,10 @@
 check_mod11(cpr)
 }
 \arguments{
-\item{cpr}{A vector of cpr number strings}
+\item{cpr}{A vector of CPR number strings}
 }
 \value{
-A logical vector with values TRUE (cpr number ok), FALSE (cpr number not ok), or NA (cannot check)
+A logical vector with values TRUE (CPR number ok), FALSE (CPR number not ok), or NA (cannot check)
 }
 \description{
 Check the modulo 11 rules for CPR numbers

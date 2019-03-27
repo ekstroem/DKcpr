@@ -1,7 +1,7 @@
 #' Check the modulo 11 rules for CPR numbers
 #'
-#' @param cpr A vector of cpr number strings
-#' @return A logical vector with values TRUE (cpr number ok), FALSE (cpr number not ok), or NA (cannot check)
+#' @param cpr A vector of CPR number strings
+#' @return A logical vector with values TRUE (CPR number ok), FALSE (CPR number not ok), or NA (cannot check)
 #' @export
 check_mod11 <- function(cpr) {
 
@@ -19,11 +19,11 @@ check_mod11 <- function(cpr) {
 
 #' Check whether the CPR number is valid
 #'
-#' @param cpr A vector of cpr number strings
-#' @return A logical vector with values TRUE (cpr number ok), FALSE (cpr number not ok), or NA (Not a proper date)
+#' @param cpr A vector of CPR number strings
+#' @return A logical vector with values TRUE (CPR number valid), FALSE (CPR number not valid), or NA (Not a proper date)
 #' @export
 is_cpr <- function(cpr) {
-  # Check date is a proper date
+  # Check that date is a proper date
   dob <- date_of_birth(cpr)
   
   # Before October 1st 2007 check the mod 11 rule
@@ -34,8 +34,8 @@ is_cpr <- function(cpr) {
 
 #' Check the modulo 11 rules for CPR numbers
 #'
-#' @param cpr A vector of cpr number strings
-#' @return A vector of cleaned cpr number strings
+#' @param cpr A vector of potential CPR number strings
+#' @return A vector of cleaned CPR number strings
 #' @examples
 #' cpr <- c("1010101234", "11111111", "101010-1234", "Cprnr : 101010-1234")
 #' clean_cprstring(cpr)
@@ -43,7 +43,7 @@ is_cpr <- function(cpr) {
 clean_cprstring <- function(cpr) {
     # Remove all non-numeric numbers
     cpr <- gsub("[^0-9]", "", cpr)
-    # Check that it has length 10 characters
+    # Check that it has exactly a length of 10 characters
     cpr[nchar(cpr) != 10] <- NA
     cpr
 }

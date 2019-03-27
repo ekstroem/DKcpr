@@ -7,10 +7,10 @@
 is_cpr(cpr)
 }
 \arguments{
-\item{cpr}{A vector of cpr number strings}
+\item{cpr}{A vector of CPR number strings}
 }
 \value{
-A logical vector with values TRUE (cpr number ok), FALSE (cpr number not ok), or NA (Not a proper date)
+A logical vector with values TRUE (CPR number valid), FALSE (CPR number not valid), or NA (Not a proper date)
 }
 \description{
 Check whether the CPR number is valid

@@ -13,7 +13,8 @@ date_of_birth(cpr)
 A Date object with the date-of-births in YYYY-MM-DD format or NA if not a proper date
 }
 \description{
-Returns the date-of-birth from a CPR number
+The first 6 digits of a CPR number contain the date-of-birth in a DDMMYY format. This format is not unique since only
+two digits are available for the year, and the exact century can be derived from the last 4 digits.
 }
 \examples{
 date_of_birth("2310450637")  # This is testing out a randomly generated number

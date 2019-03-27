@@ -13,7 +13,7 @@ gender(cpr)
 A vector with gender as integer (0 = female, 1 = male)
 }
 \description{
-Returns the gender from a CPR number
+Gender is encoded in the last digit. If it is odd then it is a male, and if it is even then it is female.
 }
 \examples{
 gender("2310450637")  # This is testing out a randomly generated number
